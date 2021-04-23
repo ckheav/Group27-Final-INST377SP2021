@@ -100,7 +100,7 @@ router.put('/weather_p', async (req, res) => {
 /// ///////////////////////////////////
 /// //// ~*Weather Secondary Endpoints *~ ////
 /// ///////////////////////////////////
-router.get('/celestial_phases', async (req, res) => {
+router.get('/weather_secondary', async (req, res) => {
   try {
     const events = await db.WeatherSecondary.findAll();
     const reply = events.length > 0 ? { data: events } : { message: 'no results found' };
@@ -111,7 +111,7 @@ router.get('/celestial_phases', async (req, res) => {
   }
 });
 
-router.get('/weather_secodary)/:weather_secondary_id', async (req, res) => {
+router.get('/weather_secondary/:weather_secondary_id', async (req, res) => {
   try {
     const event = await db.WeatherSecondary.findAll({
       where: {
@@ -128,15 +128,6 @@ router.get('/weather_secodary)/:weather_secondary_id', async (req, res) => {
 
 router.post('/weather_secondary', async (req, res) => {
   try {
-    // const newEvent = await db.CelestialPhases.create({
-    //   celestial_id_id: req.body.celestial_id,
-    //   moon_type: req.body.moon_type,
-    //   moon_rise_time: req.body.moon_rise_time,
-    //   moon_fall_time: req.body.moon_fall_time,
-    //   sun_rise_time: req.body.sun_rise_time,
-    //   sun_fall_time: req.body.sun_fall_time,
-    //   sea_info_id: req.body.sea_info_id,
-
     const newEvent = await db.WeatherSecondary.create({
       weather_secondary_id: req.body.weather_secondary_id,
       pressure_Hg: req.body.pressure_Hg,
