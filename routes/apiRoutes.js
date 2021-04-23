@@ -28,7 +28,7 @@ router.get('/weather_p/:weather_primary_id', async (req, res) => {
   try {
     const event = await db.WeatherPrimary.findAll({
       where: {
-        weather_primary_id: req.params.weather_primary_id,
+        weather_primary_id: req.params.weather_primary_id
       }
     });
 
@@ -50,7 +50,7 @@ router.post('/weather_p', async (req, res) => {
       date: req.body.date,
       weather_secondary_id: req.body.weather_secondary_id,
       region_id: req.body.region_id,
-      season_id: req.body.season_id,
+      season_id: req.body.season_id
     });
     res.json(newEvent);
   } catch (err) {
@@ -63,7 +63,7 @@ router.delete('/weather_p/:weather_primary_id', async (req, res) => {
   try {
     await db.WeatherPrimary.destroy({
       where: {
-        weather_primary_id: req.params.weather_primary_id,
+        weather_primary_id: req.params.weather_primary_id
       }
     });
     res.send('Successfully Deleted');
@@ -84,11 +84,11 @@ router.put('/weather_p', async (req, res) => {
         date: req.body.date,
         weather_secondary_id: req.body.weather_secondary_id,
         region_id: req.body.region_id,
-        season_id: req.body.season_id,
+        season_id: req.body.season_id
       },
       {
         where: {
-          weather_primary_id: req.body.weather_primary_id,
+          weather_primary_id: req.body.weather_primary_id
         }
       }
     );
@@ -117,7 +117,7 @@ router.get('/weather_p/:weather_primary_id', async (req, res) => {
   try {
     const event = await db.WeatherPrimary.findAll({
       where: {
-        weather_primary_id: req.params.weather_primary_id,
+        weather_primary_id: req.params.weather_primary_id
       }
     });
 
@@ -139,7 +139,7 @@ router.post('/weather_p', async (req, res) => {
       date: req.body.date,
       weather_secondary_id: req.body.weather_secondary_id,
       region_id: req.body.region_id,
-      season_id: req.body.season_id,
+      season_id: req.body.season_id
     });
     res.json(newEvent);
   } catch (err) {
@@ -152,7 +152,7 @@ router.delete('/weather_p/:weather_primary_id', async (req, res) => {
   try {
     await db.WeatherPrimary.destroy({
       where: {
-        weather_primary_id: req.params.weather_primary_id,
+        weather_primary_id: req.params.weather_primary_id
       }
     });
     res.send('Successfully Deleted');
@@ -173,11 +173,11 @@ router.put('/weather_p', async (req, res) => {
         date: req.body.date,
         weather_secondary_id: req.body.weather_secondary_id,
         region_id: req.body.region_id,
-        season_id: req.body.season_id,
+        season_id: req.body.season_id
       },
       {
         where: {
-          weather_primary_id: req.body.weather_primary_id,
+          weather_primary_id: req.body.weather_primary_id
         }
       }
     );
@@ -186,58 +186,55 @@ router.put('/weather_p', async (req, res) => {
     console.error(err);
     res.error('Server error');
   }
+});
 
-//////////////////////////////////////
-////////// Region  Endpoints /////////
-//////////////////////////////////////
+/// ///////////////////////////////////
+/// /////// Region  Endpoints /////////
+/// ///////////////////////////////////
 
-router.get("/regions", async (req, res) => {
+router.get('/regions', async (req, res) => {
   try {
     const regions = await db.Regions.findAll();
     res.json(regions);
   } catch (err) {
     console.error(err);
-    res.error("Server error");
+    res.error('Server error');
   }
 });
 
-router.get("/regions/:region_id", async (req, res) => {
+router.get('/regions/:region_id', async (req, res) => {
   try {
     const regions = await db.Regions.findAll({
       where: {
-        region_id: req.params.region_id,
-      },
+        region_id: req.params.region_id
+      }
     });
     res.json(regions);
   } catch (err) {
     console.error(err);
-    res.error("Server error");
+    res.error('Server error');
   }
 });
 
-router.put("/regions", async (req, res) => {
+router.put('/regions', async (req, res) => {
   try {
     await db.Regions.update(
       {
         city: req.body.city,
         state: req.body.state,
-        zip_code: req.body.zip_code,
+        zip_code: req.body.zip_code
       },
       {
         where: {
-          region_id: req.body.region_id,
-        },
+          region_id: req.body.region_id
+        }
       }
     );
-    res.send("Region Successfully Updated");
+    res.send('Region Successfully Updated');
   } catch (err) {
     console.error(err);
-    res.error("Server error");
+    res.error('Server error');
   }
 });
 
-
-
 export default router;
-
-});
