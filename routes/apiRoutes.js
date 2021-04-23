@@ -40,7 +40,6 @@ router.get('/weather_p/:weather_primary_id', async (req, res) => {
 });
 
 router.post('/weather_p', async (req, res) => {
-  const events = await db.WeatherPrimary.findAll();
   try {
     const newEvent = await db.WeatherPrimary.create({
       weather_primary_id_id: req.body.weather_primary_id,
@@ -77,7 +76,6 @@ router.put('/weather_p', async (req, res) => {
   try {
     await db.WeatherPrimary.update(
       {
-        weather_primary_id_id: req.body.weather_primary_id,
         temperature: req.body.temperature,
         humidity: req.body.humidity,
         wind_speed: req.body.wind_speed,
@@ -129,7 +127,6 @@ router.get('/celestial_phases/:celstial_id', async (req, res) => {
 });
 
 router.post('/celestial_phases', async (req, res) => {
-  const events = await db.CelestialPhases.findAll();
   try {
     const newEvent = await db.CelestialPhases.create({
       celestial_id_id: req.body.celestial_id,
@@ -165,7 +162,6 @@ router.put('/celestial_phases', async (req, res) => {
   try {
     await db.CelestialPhases.update(
       {
-        celstial_id_id: req.body.celestial_id,
         moon_type: req.body.moon_type,
         moon_rise_time: req.body.moon_rise_time,
         moon_fall_time: req.body.moon_fall_time,
@@ -265,7 +261,6 @@ router.get('/sea_info/:sea_info_id', async (req, res) => {
 });
 
 router.post('/sea_info', async (req, res) => {
-  const events = await db.SeaInfo.findAll();
   try {
     const newEvent = await db.SeaInfo.create({
       sea_info_id: req.body.sea_info_id,
