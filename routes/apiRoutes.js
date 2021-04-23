@@ -98,6 +98,102 @@ router.put('/weather_p', async (req, res) => {
 });
 
 /// ///////////////////////////////////
+/// //// ~*Weather Secondary Endpoints *~ ////
+/// ///////////////////////////////////
+router.get('/celestial_phases', async (req, res) => {
+  try {
+    const events = await db.WeatherSecondary.findAll();
+    const reply = events.length > 0 ? { data: events } : { message: 'no results found' };
+    res.json(reply);
+  } catch (err) {
+    console.error(err);
+    res.error('Server error');
+  }
+});
+
+router.get('/weather_secodary)/:weather_secondary_id', async (req, res) => {
+  try {
+    const event = await db.WeatherSecondary.findAll({
+      where: {
+        weather_secondary_id: req.params.weather_secondary_id
+      }
+    });
+
+    res.json(event);
+  } catch (err) {
+    console.error(err);
+    res.error('Server error');
+  }
+});
+
+router.post('/weather_secondary', async (req, res) => {
+  try {
+    // const newEvent = await db.CelestialPhases.create({
+    //   celestial_id_id: req.body.celestial_id,
+    //   moon_type: req.body.moon_type,
+    //   moon_rise_time: req.body.moon_rise_time,
+    //   moon_fall_time: req.body.moon_fall_time,
+    //   sun_rise_time: req.body.sun_rise_time,
+    //   sun_fall_time: req.body.sun_fall_time,
+    //   sea_info_id: req.body.sea_info_id,
+
+    const newEvent = await db.WeatherSecondary.create({
+      weather_secondary_id: req.body.weather_secondary_id,
+      pressure_Hg: req.body.pressure_Hg,
+      precipitation_in:req.body.precipitation_in,
+      dew_point: req.body.dew_point
+    });
+    res.json(newEvent);
+  } catch (err) {
+    console.error(err);
+    res.error('Server error');
+  }
+});
+
+router.delete('/weather_secondary/:weather_secondary', async (req, res) => {
+  try {
+    await db.WeatherSecondary.destroy({
+      where: {
+        weather_secondary_id: req.params.weather_secondary_id
+      }
+    });
+    res.send('Successfully Deleted');
+  } catch (err) {
+    console.error(err);
+    res.error('Server error');
+  }
+});
+
+router.put('/weather_secondary', async (req, res) => {
+  try {
+    await db.WeatherSecondary.update(
+      {
+        // moon_type: req.body.moon_type,
+        // moon_rise_time: req.body.moon_rise_time,
+        // moon_fall_time: req.body.moon_fall_time,
+        // sun_rise_time: req.body.sun_rise_time,
+        // sun_fall_time: req.body.sun_fall_time,
+        // sea_info_id: req.body.sea_info_id,
+        weather_secondary_id: req.body.weather_secondary_id,
+        pressure_Hg: req.body.pressure_Hg,
+        precipitation_in: req.precipitation_in,
+        dew_point: req.body.dew_point,
+      },
+      {
+        where: {
+          weather_secondary_id: req.body.weather_secondary_id
+        }
+      }
+    );
+    res.send('Successfully Updated');
+  } catch (err) {
+    console.error(err);
+    res.error('Server error');
+  }
+});
+
+
+/// ///////////////////////////////////
 /// //// ~* Celestial Endpoints *~ ////
 /// ///////////////////////////////////
 router.get('/celestial_phases', async (req, res) => {
@@ -129,7 +225,8 @@ router.get('/celestial_phases/:celstial_id', async (req, res) => {
 router.post('/celestial_phases', async (req, res) => {
   try {
     const newEvent = await db.CelestialPhases.create({
-      celestial_id_id: req.body.celestial_id,
+      celestial_id: req.body.celestial_id, 
+      // ^ changed from celestial_id_id to celestial_id
       moon_type: req.body.moon_type,
       moon_rise_time: req.body.moon_rise_time,
       moon_fall_time: req.body.moon_fall_time,
