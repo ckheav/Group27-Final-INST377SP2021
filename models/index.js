@@ -3,7 +3,6 @@ import Regions from './Regions.js';
 import SeaInfo from './SeaInfo.js';
 import CelestialPhases from './celestial';
 
-
 export default {
   WeatherPrimary,
   Regions,
