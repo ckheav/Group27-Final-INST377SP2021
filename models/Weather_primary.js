@@ -19,7 +19,7 @@ export default (sequelize, DataTypes) => {
       },
 
       date: {
-        type: DataTypes.DATETIME
+        type: DataTypes.TIME
       },
       weather_secondary_id: {
         type: DataTypes.INTEGER,

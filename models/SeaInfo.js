@@ -9,19 +9,19 @@ export default (sequelize, DataTypes) => {
         primaryKey: true
       },
       full_tide_present: {
-        type: DataTypes.VARCHAR
+        type: DataTypes.STRING
       },
       high_tide_rise_height: {
-        type: DataTypes.DECIMAL
+        type: DataTypes.DOUBLE
       },
       high_tide_set_height: {
-        type: DataTypes.DECIMAL
+        type: DataTypes.DOUBLE
       },
       low_tide_rise_height: {
-        type: DataTypes.DECIMAL
+        type: DataTypes.DOUBLE
       },
       low_tide_set_height: {
-        type: DataTypes.DECIMAL
+        type: DataTypes.DOUBLE
       }
     },
     { freezeTableName: true, timestamps: false }

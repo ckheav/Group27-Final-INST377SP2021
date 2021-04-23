@@ -9,7 +9,7 @@ export default (sequelize, DataTypes) => {
         primaryKey: true
       },
       moon_type: {
-        type: DataTypes.VARCHAR45
+        type: DataTypes.STRING
       },
       moon_rise_time: {
         type: DataTypes.TIME
