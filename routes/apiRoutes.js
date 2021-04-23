@@ -102,9 +102,9 @@ router.put('/weather_p', async (req, res) => {
 /// ///////////////////////////////////
 /// //// ~* Celestial Endpoints *~ ////
 /// ///////////////////////////////////
-router.get('/weather_p', async (req, res) => {
+router.get('/celestial_phases', async (req, res) => {
   try {
-    const events = await db.WeatherPrimary.findAll();
+    const events = await db.CelestialPhases.findAll();
     const reply = events.length > 0 ? { data: events } : { message: 'no results found' };
     res.json(reply);
   } catch (err) {
@@ -113,11 +113,11 @@ router.get('/weather_p', async (req, res) => {
   }
 });
 
-router.get('/weather_p/:weather_primary_id', async (req, res) => {
+router.get('/celestial_phases/:celstial_id', async (req, res) => {
   try {
-    const event = await db.WeatherPrimary.findAll({
+    const event = await db.CelestialPhases.findAll({
       where: {
-        weather_primary_id: req.params.weather_primary_id
+        celstial_id: req.params.celstial_id
       }
     });
 
@@ -128,18 +128,17 @@ router.get('/weather_p/:weather_primary_id', async (req, res) => {
   }
 });
 
-router.post('/weather_p', async (req, res) => {
-  const events = await db.WeatherPrimary.findAll();
+router.post('/celestial_phases', async (req, res) => {
+  const events = await db.CelestialPhases.findAll();
   try {
-    const newEvent = await db.WeatherPrimary.create({
-      weather_primary_id_id: req.body.weather_primary_id,
-      temperature: req.body.temperature,
-      humidity: req.body.humidity,
-      wind_speed: req.body.wind_speed,
-      date: req.body.date,
-      weather_secondary_id: req.body.weather_secondary_id,
-      region_id: req.body.region_id,
-      season_id: req.body.season_id
+    const newEvent = await db.CelestialPhases.create({
+      celestial_id_id: req.body.celestial_id,
+      moon_type: req.body.moon_type,
+      moon_rise_time: req.body.moon_rise_time,
+      moon_fall_time: req.body.moon_fall_time,
+      sun_rise_time: req.body.sun_rise_time,
+      sun_fall_time: req.body.sun_fall_time,
+      sea_info_id: req.body.sea_info_id,
     });
     res.json(newEvent);
   } catch (err) {
@@ -148,11 +147,11 @@ router.post('/weather_p', async (req, res) => {
   }
 });
 
-router.delete('/weather_p/:weather_primary_id', async (req, res) => {
+router.delete('/celestial_phases/:celstial_id', async (req, res) => {
   try {
-    await db.WeatherPrimary.destroy({
+    await db.CelestialPhases.destroy({
       where: {
-        weather_primary_id: req.params.weather_primary_id
+        celstial_id: req.params.celstial_id
       }
     });
     res.send('Successfully Deleted');
@@ -162,22 +161,21 @@ router.delete('/weather_p/:weather_primary_id', async (req, res) => {
   }
 });
 
-router.put('/weather_p', async (req, res) => {
+router.put('/celestial_phases', async (req, res) => {
   try {
-    await db.WeatherPrimary.update(
+    await db.CelestialPhases.update(
       {
-        weather_primary_id_id: req.body.weather_primary_id,
-        temperature: req.body.temperature,
-        humidity: req.body.humidity,
-        wind_speed: req.body.wind_speed,
-        date: req.body.date,
-        weather_secondary_id: req.body.weather_secondary_id,
-        region_id: req.body.region_id,
-        season_id: req.body.season_id
+        celstial_id_id: req.body.celestial_id,
+        moon_type: req.body.moon_type,
+        moon_rise_time: req.body.moon_rise_time,
+        moon_fall_time: req.body.moon_fall_time,
+        sun_rise_time: req.body.sun_rise_time,
+        sun_fall_time: req.body.sun_fall_time,
+        sea_info_id: req.body.sea_info_id,
       },
       {
         where: {
-          weather_primary_id: req.body.weather_primary_id
+          celstial_id: req.body.celstial_id
         }
       }
     );
