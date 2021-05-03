@@ -343,7 +343,7 @@ router.put('/regions', async (req, res) => {
 /// ///////////////////////////////////
 /// /////// SeaInfo  Endpoints ////////
 /// ///////////////////////////////////
-router.get('/sea_information', async (req, res) => {
+router.get('/sea_info', async (req, res) => {
   try {
     const events = await db.sea_information.findAll();
     const reply = events.length > 0 ? { data: events } : { message: 'no results found' };
@@ -354,7 +354,7 @@ router.get('/sea_information', async (req, res) => {
   }
 });
 
-router.get('/sea_information/:sea_info_id', async (req, res) => {
+router.get('/sea_info/:sea_info_id', async (req, res) => {
   try {
     const event = await db.sea_information.findAll({
       where: {
