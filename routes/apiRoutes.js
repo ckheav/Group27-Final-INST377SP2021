@@ -131,7 +131,7 @@ router.post('/weather_secondary', async (req, res) => {
     const newEvent = await db.weather_secondary.create({
       weather_secondary_id: req.body.weather_secondary_id,
       pressure_Hg: req.body.pressure_Hg,
-      precipitation_in:req.body.precipitation_in,
+      precipitation_in: req.body.precipitation_in,
       dew_point: req.body.dew_point
     });
     res.json(newEvent);
@@ -161,7 +161,7 @@ router.put('/weather_secondary', async (req, res) => {
       {
         weather_secondary_id: req.body.weather_secondary_id,
         pressure_Hg: req.body.pressure_Hg,
-        precipitation_in: req.precipitation_in,
+        precipitation_in: req.body.precipitation_in,
         dew_point: req.body.dew_point,
       },
       {
@@ -182,7 +182,7 @@ router.put('/weather_secondary', async (req, res) => {
 /// ///////////////////////////////////
 router.get('/celestial_phases', async (req, res) => {
   try {
-    const events = await db.CelestialPhases.findAll();
+    const events = await db.celestial_phases.findAll();
     const reply = events.length > 0 ? { data: events } : { message: 'no results found' };
     res.json(reply);
   } catch (err) {
@@ -193,7 +193,7 @@ router.get('/celestial_phases', async (req, res) => {
 
 router.get('/celestial_phases/:celstial_id', async (req, res) => {
   try {
-    const event = await db.CelestialPhases.findAll({
+    const event = await db.celestial_phases.findAll({
       where: {
         celstial_id: req.params.celstial_id
       }
@@ -208,9 +208,8 @@ router.get('/celestial_phases/:celstial_id', async (req, res) => {
 
 router.post('/celestial_phases', async (req, res) => {
   try {
-    const newEvent = await db.CelestialPhases.create({
+    const newEvent = await db.celestial_phases.create({
       celestial_id: req.body.celestial_id, 
-      // ^ changed from celestial_id_id to celestial_id
       moon_type: req.body.moon_type,
       moon_rise_time: req.body.moon_rise_time,
       moon_fall_time: req.body.moon_fall_time,
@@ -227,7 +226,7 @@ router.post('/celestial_phases', async (req, res) => {
 
 router.delete('/celestial_phases/:celstial_id', async (req, res) => {
   try {
-    await db.CelestialPhases.destroy({
+    await db.celestial_phases.destroy({
       where: {
         celstial_id: req.params.celstial_id
       }
@@ -241,7 +240,7 @@ router.delete('/celestial_phases/:celstial_id', async (req, res) => {
 
 router.put('/celestial_phases', async (req, res) => {
   try {
-    await db.CelestialPhases.update(
+    await db.celestial_phases.update(
       {
         moon_type: req.body.moon_type,
         moon_rise_time: req.body.moon_rise_time,
@@ -269,7 +268,7 @@ router.put('/celestial_phases', async (req, res) => {
 
 router.get('/regions', async (req, res) => {
   try {
-    const regions = await db.Regions.findAll();
+    const regions = await db.regions.findAll();
     res.json(regions);
   } catch (err) {
     console.error(err);
@@ -279,7 +278,7 @@ router.get('/regions', async (req, res) => {
 
 router.get('/regions/:region_id', async (req, res) => {
   try {
-    const regions = await db.Regions.findAll({
+    const regions = await db.regions.findAll({
       where: {
         region_id: req.params.region_id
       }
@@ -291,9 +290,38 @@ router.get('/regions/:region_id', async (req, res) => {
   }
 });
 
+router.post('/regions', async (req, res) => {
+  try {
+    const newEvent = await db.regions.create({
+      region_id: req.body.region_id,
+      city: req.body.city,
+      state: req.body.state,
+      zip_code: req.body.zip_code
+    });
+    res.json(newEvent);
+  } catch (err) {
+    console.error(err);
+    res.error('Server error');
+  }
+});
+
+router.delete('/regions/:regions_id', async (req, res) => {
+  try {
+    await db.regions.destroy({
+      where: {
+        sea_info_id: req.params.sea_info_id,
+      }
+    });
+    res.send('Successfully Deleted');
+  } catch (err) {
+    console.error(err);
+    res.error('Server error');
+  }
+});
+
 router.put('/regions', async (req, res) => {
   try {
-    await db.Regions.update(
+    await db.regions.update(
       {
         city: req.body.city,
         state: req.body.state,
@@ -315,9 +343,9 @@ router.put('/regions', async (req, res) => {
 /// ///////////////////////////////////
 /// /////// SeaInfo  Endpoints ////////
 /// ///////////////////////////////////
-router.get('/sea_info', async (req, res) => {
+router.get('/sea_information', async (req, res) => {
   try {
-    const events = await db.SeaInfo.findAll();
+    const events = await db.sea_information.findAll();
     const reply = events.length > 0 ? { data: events } : { message: 'no results found' };
     res.json(reply);
   } catch (err) {
@@ -326,9 +354,9 @@ router.get('/sea_info', async (req, res) => {
   }
 });
 
-router.get('/sea_info/:sea_info_id', async (req, res) => {
+router.get('/sea_information/:sea_info_id', async (req, res) => {
   try {
-    const event = await db.SeaInfo.findAll({
+    const event = await db.sea_information.findAll({
       where: {
         sea_info_id: req.params.sea_info_id,
       }
@@ -343,9 +371,9 @@ router.get('/sea_info/:sea_info_id', async (req, res) => {
 
 router.post('/sea_info', async (req, res) => {
   try {
-    const newEvent = await db.SeaInfo.create({
+    const newEvent = await db.sea_information.create({
       sea_info_id: req.body.sea_info_id,
-      full_tide_present: req.full_tide_present,
+      full_tide_present: req.body.full_tide_present,
       high_tide_rise_height: req.body.high_tide_rise_height,
       high_tide_set_height: req.body.high_tide_set_height,
       low_tide_rise_height: req.body.low_tide_rise_height,
@@ -361,7 +389,7 @@ router.post('/sea_info', async (req, res) => {
 
 router.delete('/sea_info/:sea_info_id', async (req, res) => {
   try {
-    await db.SeaInfo.destroy({
+    await db.sea_information.destroy({
       where: {
         sea_info_id: req.params.sea_info_id,
       }
@@ -375,7 +403,7 @@ router.delete('/sea_info/:sea_info_id', async (req, res) => {
 
 router.put('/sea_info', async (req, res) => {
   try {
-    await db.SeaInfo.update(
+    await db.sea_information.update(
       {
         full_tide_present: req.full_tide_present,
         high_tide_rise_height: req.body.high_tide_rise_height,

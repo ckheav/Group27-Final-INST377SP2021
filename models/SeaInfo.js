@@ -1,6 +1,7 @@
+/* eslint-disable camelcase */
 export default (sequelize, DataTypes) => {
-  const SeaInfo = sequelize.define(
-    'SeaInfo',
+  const sea_information = sequelize.define(
+    'Ssea_information',
     {
       sea_info_id: {
         type: DataTypes.INTEGER,
@@ -26,5 +27,5 @@ export default (sequelize, DataTypes) => {
     },
     { freezeTableName: true, timestamps: false }
   );
-  return SeaInfo;
+  return sea_information;
 };

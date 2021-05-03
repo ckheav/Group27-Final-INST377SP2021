@@ -1,6 +1,6 @@
 export default (sequelize, DataTypes) => {
-  const Regions = sequelize.define(
-    'Regions',
+  const regions = sequelize.define(
+    'regions',
     {
       region_id: {
         type: DataTypes.INTEGER,
@@ -20,5 +20,5 @@ export default (sequelize, DataTypes) => {
     },
     { freezeTableName: true, timestamps: false }
   );
-  return Regions;
+  return regions;
 };
