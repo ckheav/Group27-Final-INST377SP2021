@@ -1,6 +1,7 @@
+/* eslint-disable camelcase */
 export default (sequelize, DataTypes) => {
-  const WeatherSecondary = sequelize.define(
-    'WeatherSecondary',
+  const weather_secondary = sequelize.define(
+    'weather_secondary',
     {
       weather_secondary_id: {
         type: DataTypes.INTEGER,
@@ -20,5 +21,5 @@ export default (sequelize, DataTypes) => {
     },
     { freezeTableName: true, timestamps: false }
   );
-  return WeatherSecondary;
+  return weather_secondary;
 };

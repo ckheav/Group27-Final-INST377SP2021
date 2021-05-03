@@ -102,7 +102,7 @@ router.put('/weather_p', async (req, res) => {
 /// ///////////////////////////////////
 router.get('/weather_secondary', async (req, res) => {
   try {
-    const events = await db.WeatherSecondary.findAll();
+    const events = await db.weather_secondary.findAll();
     const reply = events.length > 0 ? { data: events } : { message: 'no results found' };
     res.json(reply);
   } catch (err) {
@@ -113,7 +113,7 @@ router.get('/weather_secondary', async (req, res) => {
 
 router.get('/weather_secondary/:weather_secondary_id', async (req, res) => {
   try {
-    const event = await db.WeatherSecondary.findAll({
+    const event = await db.weather_secondary.findAll({
       where: {
         weather_secondary_id: req.params.weather_secondary_id
       }
@@ -128,7 +128,7 @@ router.get('/weather_secondary/:weather_secondary_id', async (req, res) => {
 
 router.post('/weather_secondary', async (req, res) => {
   try {
-    const newEvent = await db.WeatherSecondary.create({
+    const newEvent = await db.weather_secondary.create({
       weather_secondary_id: req.body.weather_secondary_id,
       pressure_Hg: req.body.pressure_Hg,
       precipitation_in:req.body.precipitation_in,
@@ -143,7 +143,7 @@ router.post('/weather_secondary', async (req, res) => {
 
 router.delete('/weather_secondary/:weather_secondary', async (req, res) => {
   try {
-    await db.WeatherSecondary.destroy({
+    await db.weather_secondary.destroy({
       where: {
         weather_secondary_id: req.params.weather_secondary_id
       }
@@ -157,14 +157,8 @@ router.delete('/weather_secondary/:weather_secondary', async (req, res) => {
 
 router.put('/weather_secondary', async (req, res) => {
   try {
-    await db.WeatherSecondary.update(
+    await db.weather_secondary.update(
       {
-        // moon_type: req.body.moon_type,
-        // moon_rise_time: req.body.moon_rise_time,
-        // moon_fall_time: req.body.moon_fall_time,
-        // sun_rise_time: req.body.sun_rise_time,
-        // sun_fall_time: req.body.sun_fall_time,
-        // sea_info_id: req.body.sea_info_id,
         weather_secondary_id: req.body.weather_secondary_id,
         pressure_Hg: req.body.pressure_Hg,
         precipitation_in: req.precipitation_in,
