@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 export default (sequelize, DataTypes) => {
   const sea_information = sequelize.define(
-    'Ssea_information',
+    'sea_information',
     {
       sea_info_id: {
         type: DataTypes.INTEGER,
