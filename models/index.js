@@ -1,11 +1,12 @@
-import WeatherPrimary from './Weather_primary.js';
+/* eslint-disable camelcase */
+import weather_primary from './Weather_primary.js';
 import Regions from './Regions.js';
 import SeaInfo from './SeaInfo.js';
 import CelestialPhases from './celestial.js';
 import WeatherSecondary from './Weather_secondary.js';
 
 export default {
-  WeatherPrimary,
+  weather_primary,
   Regions,
   SeaInfo,
   CelestialPhases,
