@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 /// ///////////////////////////////////
 router.get('/weather_p', async (req, res) => {
   try {
-    const events = await db.WeatherPrimary.findAll();
+    const events = await db.weather_primary.findAll();
     const reply = events.length > 0 ? { data: events } : { message: 'no results found' };
     res.json(reply);
   } catch (err) {
@@ -26,7 +26,7 @@ router.get('/weather_p', async (req, res) => {
 
 router.get('/weather_p/:weather_primary_id', async (req, res) => {
   try {
-    const event = await db.WeatherPrimary.findAll({
+    const event = await db.weather_primary.findAll({
       where: {
         weather_primary_id: req.params.weather_primary_id
       }
@@ -41,7 +41,7 @@ router.get('/weather_p/:weather_primary_id', async (req, res) => {
 
 router.post('/weather_p', async (req, res) => {
   try {
-    const newEvent = await db.WeatherPrimary.create({
+    const newEvent = await db.weather_primary.create({
       weather_primary_id_id: req.body.weather_primary_id,
       temperature: req.body.temperature,
       humidity: req.body.humidity,
@@ -60,7 +60,7 @@ router.post('/weather_p', async (req, res) => {
 
 router.delete('/weather_p/:weather_primary_id', async (req, res) => {
   try {
-    await db.WeatherPrimary.destroy({
+    await db.weather_primary.destroy({
       where: {
         weather_primary_id: req.params.weather_primary_id
       }
@@ -74,7 +74,7 @@ router.delete('/weather_p/:weather_primary_id', async (req, res) => {
 
 router.put('/weather_p', async (req, res) => {
   try {
-    await db.WeatherPrimary.update(
+    await db.weather_primary.update(
       {
         temperature: req.body.temperature,
         humidity: req.body.humidity,
@@ -182,7 +182,6 @@ router.put('/weather_secondary', async (req, res) => {
     res.error('Server error');
   }
 });
-
 
 /// ///////////////////////////////////
 /// //// ~* Celestial Endpoints *~ ////
