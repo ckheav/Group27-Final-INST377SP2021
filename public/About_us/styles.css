@@ -1,5 +1,6 @@
 html {
     background: skyblue;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -8,7 +9,97 @@ h1 {
     font-size: 100px;
     font-family: 'Times New Roman', Times, serif;
 }
-/* Add a black background color to the top navigation */
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .flex-container {
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  .flex-container > div {
+    display: flex; 
+    flex-basis: calc(50% - 40px);  
+    justify-content: center;
+    flex-direction: row;
+  }
+  .flex-container > div > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10;
+  }
+  
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    min-width:80%;
+    
+  }
+  
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+  }
+  
+  .container {
+    padding: 0 16px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    text-align: center;
+
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+    text-align: center;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  /* Add a black background color to the top navigation */
 .topnav {
     background-color: #333;
     overflow: hidden;
@@ -33,6 +124,6 @@ h1 {
   
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color: #4CAF50;
+    background-color: #1e6892;
     color: white;
   }
