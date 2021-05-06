@@ -24,6 +24,5 @@ async function dataHandler() {
   console.log(SeaInfo);
   console.log(Regions);
   console.log(CelestialPhases);
-
 }
 dataHandler();
