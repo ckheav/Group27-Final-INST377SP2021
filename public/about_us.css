@@ -50,9 +50,9 @@ body {
   }
   
   .about-section {
+    margin-top: 3%;
     padding: 50px;
     text-align: center;
-    background-color: #474e5d;
     color: white;
   }
   
@@ -101,7 +101,6 @@ body {
 
   /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #333;
     overflow: hidden;
    
   }
@@ -162,3 +161,8 @@ body {
     -ms-flex-align: center;
     display: flex;
     justify-content: center;
+  }
+
+  h2 {
+    font-size: 70px;
+  }
