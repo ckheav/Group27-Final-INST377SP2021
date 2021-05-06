@@ -127,3 +127,38 @@ body {
     background-color: #1e6892;
     color: white;
   }
+
+  /* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+    justify-content: center;
+    margin-top: 1;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    color:grey;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .topnav {
+    -ms-flex-align: center;
+    display: flex;
+    justify-content: center;
