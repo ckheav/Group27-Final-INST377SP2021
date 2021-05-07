@@ -13,16 +13,16 @@ export default (sequelize, DataTypes) => {
         type: DataTypes.STRING
       },
       high_tide_rise_height: {
-        type: DataTypes.DOUBLE
+        type: DataTypes.DECIMAL
       },
       high_tide_set_height: {
-        type: DataTypes.DOUBLE
+        type: DataTypes.DECIMAL
       },
       low_tide_rise_height: {
-        type: DataTypes.DOUBLE
+        type: DataTypes.DECIMAL
       },
       low_tide_set_height: {
-        type: DataTypes.DOUBLE
+        type: DataTypes.DECIMAL
       }
     },
     { freezeTableName: true, timestamps: false }

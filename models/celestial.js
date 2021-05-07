@@ -25,7 +25,8 @@ export default (sequelize, DataTypes) => {
         type: DataTypes.TIME
       },
       sea_info_id: {
-        type: DataTypes.INTEGER
+        type: DataTypes.INTEGER,
+        foreignKey: true
       },
     },
     { freezeTableName: true, timestamps: false }

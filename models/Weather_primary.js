@@ -10,10 +10,10 @@ export default (sequelize, DataTypes) => {
         primaryKey: true
       },
       temperature: {
-        type: DataTypes.DOUBLE
+        type: DataTypes.DECIMAL
       },
       humidity: {
-        type: DataTypes.DOUBLE
+        type: DataTypes.DECIMAL
       },
       wind_speed: {
         type: DataTypes.INTEGER
@@ -24,17 +24,17 @@ export default (sequelize, DataTypes) => {
       },
       weather_secondary_id: {
         type: DataTypes.INTEGER,
-        primaryKey: false
+        foreignKey: true
       },
       region_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        primaryKey: false
+        foreignKey: true
       },
       season_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        primaryKey: false
+        foreignKey: true
       },
     },
     { freezeTableName: true, timestamps: false }

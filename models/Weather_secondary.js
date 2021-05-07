@@ -10,13 +10,13 @@ export default (sequelize, DataTypes) => {
         primaryKey: true
       },
       pressure_Hg: {
-        type: DataTypes.DOUBLE
+        type: DataTypes.DECIMAL
       },
       precipitation_in: {
-        type: DataTypes.DOUBLE
+        type: DataTypes.DECIMAL
       },
       dew_point: {
-        type: DataTypes.DOUBLE
+        type: DataTypes.DECIMAL
       }
     },
     { freezeTableName: true, timestamps: false }
