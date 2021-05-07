@@ -12,6 +12,7 @@
     
     <!-- Quick little nav bar and header -->
     <header>
+        <h1>Weather Vane</h1>
         <div class="topnav">
             <a href="index.html">Home</a>
             <a href="compare_w&c.html">Compare Weather & Climate</a>
@@ -20,11 +21,21 @@
         </div>
         
         <div class="add_new_entry-section">
-            <h1>Add New Entry</h1>
+            <h2>Add New Entry</h2>
             <p>Some text about who we are and what we do.</p>
         </div>
-        
     </header>
+    <form> 
+        <label for="City"> City </label><br>
+        <input type="text" id="City" name = "City"><br>
+        <label for="State"> State Abbreviation </label><br>
+        <input type="text" id="State" name = "State"><br>
+        <label for="Zipcode"> Zipcode </label><br>
+        <input type="integer" id="Zipcode" name = "Zipcode"><br>
+        <button type="submit"> Submit Entry </button>
+    </form>
+
 </body>
 </html>
+
 
