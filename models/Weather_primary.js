@@ -7,7 +7,8 @@ export default (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
         unique: true,
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true
       },
       temperature: {
         type: DataTypes.DECIMAL
@@ -20,7 +21,7 @@ export default (sequelize, DataTypes) => {
       },
 
       date: {
-        type: DataTypes.TIME
+        type: DataTypes.DATE
       },
       weather_secondary_id: {
         type: DataTypes.INTEGER,

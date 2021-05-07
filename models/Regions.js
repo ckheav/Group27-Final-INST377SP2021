@@ -7,7 +7,7 @@ export default (sequelize, DataTypes) => {
         allowNull: false,
         unique: true,
         primaryKey: true,
-        autoincrement: true
+        autoIncrement: true
       },
       city: {
         type: DataTypes.STRING

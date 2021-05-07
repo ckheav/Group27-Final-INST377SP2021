@@ -7,7 +7,8 @@ export default (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
         unique: true,
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true
       },
       moon_type: {
         type: DataTypes.STRING

@@ -291,9 +291,10 @@ router.get('/regions/:region_id', async (req, res) => {
 });
 
 router.post('/regions', async (req, res) => {
+  const currentID = (await regions.length) + 1;
   try {
     const newEvent = await db.regions.create({
-      region_id: req.body.region_id,
+      region_id: currentID,
       city: req.body.city,
       state: req.body.state,
       zip_code: req.body.zip_code
@@ -305,11 +306,11 @@ router.post('/regions', async (req, res) => {
   }
 });
 
-router.delete('/regions/:regions_id', async (req, res) => {
+router.delete('/regions/:region_id', async (req, res) => {
   try {
     await db.regions.destroy({
       where: {
-        sea_info_id: req.params.sea_info_id,
+        region_id: req.params.region_id,
       }
     });
     res.send('Successfully Deleted');
