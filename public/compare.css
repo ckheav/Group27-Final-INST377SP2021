@@ -84,3 +84,43 @@ h1 {
   h2 {
     font-size: 70px;
   }
+
+  p{
+    font-size: 18px;
+  }
+
+  .form{
+    width:985px; 
+    margin-left: 45%;
+    font-size: 30px;
+  }
+
+  .button{
+    margin-top: 2%;
+    font-size: 30px;
+  }
+
+  .location_1_box{
+    height: 30px;
+    position:fixed;
+    left: 50%; /* center on x direction */
+    transform:translateX(-50%);
+    height:50px;
+  }
+
+  .location_2_box{
+    height: 30px;
+    position:fixed;
+    left: 50%; /* center on x direction */
+    transform:translateX(-50%);
+    height:50px;
+  }
+
+p{
+  font-size: 30px;
+}
+
+input[type="text"]
+{
+    font-size:24px;
+}
