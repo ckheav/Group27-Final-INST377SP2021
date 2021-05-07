@@ -33,34 +33,22 @@
 
       <!-- form -->
       <div class="is-active is-centered">
-        <form action= "/api/regions" id="Submission" class= "form is-centered" method ="POST"> 
-            <!-- <label for="City"> City </label><br> -->
-            <!-- <input class="City_name" type="text" id="City" name = "City" style="width: 600px; position: absolute;"><br>
-            <label for="State"> State Abbreviation </label><br>
-            <input class="State_Abb" type="text" id="State" name = "State" style="width: 600px;"><br>
-            <label for="Zipcode"> Zip Code </label><br>
-            <input class="Zip_Code" type="integer" id="Zipcode" name = "Zipcode" style="width: 600px;"><br>
-            <button class="button" type="submit"> Submit Entry </button> -->
-
-
-                <!-- City input and Label -->
-            
+        <form id="Submission" class= "form is-centered" method ="POST"> 
             <div class = "field is-centered">
             <div class="field is-horizontal">
                    <div class="field-label">
-                   
-                  <label class="label">City</label>
+                       <label class="label">City</label>
                     </div>
                 <div class="field-body">
                   <div class="field">
                     <div class="control">
-                      <input class="input is-rounded" type="text" placeholder="City (e.g. College Park)">
+                      <input class="input is-rounded" id="City" type="text" placeholder="City (e.g. College Park)">
                     </div>
-                    <!-- <p class = "help"> Type the city name here </p> -->
                   </div>
                 </div>
             </div>
             </div>
+
               <!-- State Input and Label -->
               <div class="field is-horizontal">
                   
@@ -70,9 +58,8 @@
                 <div class="field-body">
                   <div class="field">
                     <p class="control">
-                      <input class="input is-rounded" type="text" placeholder=" State Abbreveation (e.g. MD)">
+                      <input class="input is-rounded" id="State" type="text" placeholder="State Abbreveation (e.g. MD)">
                     </p>
-                    <!-- <p class = "help"> Type the 2 letter state abbreviation here </p> -->
                   </div>
                 </div>
               </div>
@@ -85,43 +72,17 @@
                 <div class="field-body">
                   <div class="field">
                     <p class="control">
-                      <input class="input is-rounded is-large" type ="number" placeholder="Zip Code (e.g. 20740)">
+                      <input class="input is-rounded is-large" id="Zipcode" type ="number" placeholder="Zip Code (e.g. 20740)">
                     </p>
-                    <!-- <p class = "help"> Type the 5 digit zipcode here </p> -->
                   </div>
                 </div>
               </div>
-            
+        
              <button class="button is-primary is-focused" type ="submit"> Submit Entry </button> 
             </div>
         </form>
-</body>
-            <!-- <!<div class = "field is-verticle">
-                <div class = "field-label is-horizontal" >
-                    <label class = "label"> City </label>
-                </div>
-                <div class="field-body">
-                    <div class="field">
-                      <p class="control">
-                         <input class="input is-rounded " type="text" placeholder = "City" style = "width: 600px;">
-                    </div>
-                </div>  
-            
-           -->
-                
-                
-                
-                
-                
-                <!-- <label for="State"> State Abbreviation </label><br>
-                <input class="input is-rounded " type="text" placeholder="State" name = "State" style="width: 600px;"><br>
-                <label for="Zipcode"> Zip Code </label><br>
-                <input class="input is-rounded " type="integer" placeholder="Zipcode" name = "Zipcode" style="width: 600px;"><br>
-            </div>
-        </form>
-    </div>
-
-</body>
+    <script src="add_new_entry.js"></script>
+</body>          
 </html>
 
 

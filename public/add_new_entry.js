@@ -6,8 +6,6 @@ async function printData() {
   console.log(Regions);
 }
 
-
-
 async function windowActions() {
   console.log('loaded window');
 
