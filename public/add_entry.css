@@ -84,3 +84,57 @@ h1 {
   h2 {
     font-size: 70px;
   }
+
+.form{
+    width:985px; 
+    margin-left: 30%;
+    font-size: 30px;
+  }
+
+.button{
+    margin-top: 2%;
+    font-size: 30px;
+    transform: translateX(-50%);
+    right: 10%;
+    position: relative;
+  }
+
+.City_name{
+    height: 30px;
+    position:fixed;
+    left: 50%; /* center on x direction */
+    transform: translateX(-50%);
+    height: 50px;
+  }
+
+.State_Abb{
+    height: 30px;
+    position:fixed;
+    left: 50%; /* center on x direction */
+    transform: translateX(-50%);
+    height: 50px;
+  }
+
+.Zip_Code{
+    height: 30px;
+    position:fixed;
+    left: 50%; /* center on x direction */
+    transform: translateX(-50%);
+    height: 50px;
+  }
+
+label{
+  font-size: 30px;
+  left: 180px;
+  justify-content: center;
+  margin-left: -15%;
+}
+
+input[type="text"]
+{
+    font-size:24px;
+}
+
+p{
+  font-size: 30px;
+}

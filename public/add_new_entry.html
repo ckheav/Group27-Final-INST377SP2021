@@ -15,25 +15,26 @@
         <h1>Weather Vane</h1>
         <div class="topnav">
             <a href="index.html">Home</a>
-            <a href="compare_w&c.html">Compare Weather & Climate</a>
+            <a href="compare_w&c.html">Compare Climate & Location</a>
             <a class="active" href="add_new_entry.html">Add New Entry</a>
             <a href="about_us.html">About Us</a>
         </div>
         
         <div class="add_new_entry-section">
-            <h2>Add New Entry</h2>
-            <p>Some text about who we are and what we do.</p>
+            <p>Input city name, state abbreviation, or zipcode of a location that you would like to add.</p>
         </div>
     </header>
-    <form> 
-        <label for="City"> City </label><br>
-        <input type="text" id="City" name = "City"><br>
-        <label for="State"> State Abbreviation </label><br>
-        <input type="text" id="State" name = "State"><br>
-        <label for="Zipcode"> Zipcode </label><br>
-        <input type="integer" id="Zipcode" name = "Zipcode"><br>
-        <button type="submit"> Submit Entry </button>
-    </form>
+    <div class="form">
+        <form action= "/api/regions" id="Submission" class= "form" method ="POST"> 
+            <label for="City"> City </label><br>
+            <input class="City_name" type="text" id="City" name = "City" style="width: 600px; position: absolute;"><br>
+            <label for="State"> State Abbreviation </label><br>
+            <input class="State_Abb" type="text" id="State" name = "State" style="width: 600px;"><br>
+            <label for="Zipcode"> Zip Code </label><br>
+            <input class="Zip_Code" type="integer" id="Zipcode" name = "Zipcode" style="width: 600px;"><br>
+            <button class="button" type="submit"> Submit Entry </button>
+        </form>
+    </div>
 
 </body>
 </html>
