@@ -25,15 +25,16 @@
             <p>Some text about who we are and what we do.</p>
         </div>
     </header>
-    <form>
+    <form action= "/api/regions" id="Submission" class= "form" method ="POST"> 
         <label for="City"> City </label><br>
         <input type="text" id="City" name = "City"><br>
         <label for="State"> State Abbreviation </label><br>
         <input type="text" id="State" name = "State"><br>
         <label for="Zipcode"> Zipcode </label><br>
         <input type="integer" id="Zipcode" name = "Zipcode"><br>
-        <input type="submit" value = "Submit"><br>
+        <button type="submit"> Submit Entry </button>
     </form>
+
 </body>
 </html>
 
