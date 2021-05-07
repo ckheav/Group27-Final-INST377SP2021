@@ -59,7 +59,7 @@ body {
   .container {
     padding: 0 16px;
     display: flex;
-    flex-direction:column;
+    flex-direction:columnx;
     justify-content: space-around;
     text-align: center;
 
