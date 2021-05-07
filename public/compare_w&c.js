@@ -30,7 +30,7 @@ async function windowActions(){
     regions.forEach(hall =>{
         const button = document.createElement('button');
         button.innerText = 
-    })
+    });
 }
 
 window.onload = windowActions;
