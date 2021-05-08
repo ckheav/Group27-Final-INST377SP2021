@@ -94,7 +94,7 @@ h1 {
     font-size: 30px;
     transform: translateX(-50%);
     margin-left: 50%;
-    /* position: relative; */ 
+    position: relative; 
     
   }
 
