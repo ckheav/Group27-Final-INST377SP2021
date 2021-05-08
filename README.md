@@ -12,8 +12,8 @@ Weather is an ever changing aspect of the world and wanting to compare different
 - iPhone 6/7/& 8 
 
 ## Links
-- [User Manual](https://github.com/ckheav/Group27-Final-INST377SP2021/blob/main/UserManual.md)
-- [Developer Manual](https://github.com/ckheav/Group27-Final-INST377SP2021/blob/main/DeveloperManual.md)
+- [User Manual](https://github.com/ckheav/Group27-Final-INST377SP2021/blob/main/Docs/UserManual.md)
+- [Developer Manual](https://github.com/ckheav/Group27-Final-INST377SP2021/blob/main/Docs/DeveloperManual.md)
 
 # Developer Manual
 ## How to install application and all dependencies
