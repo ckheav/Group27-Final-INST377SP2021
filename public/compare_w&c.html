@@ -12,26 +12,13 @@
 <body>
     
     <!-- Quick little nav bar and header -->
-    <div class = "box">
-        <h1> Weather Vane </h1>
-      
-        <header class="flex-container">
-            <nav class= "navbar" role = "navigation">
-            <div class = "navbar-brand">
-                <a class = "navbar-item is-white is-medium" href="index.html"> Home </a>
-                <a class = "active navbar-item is-white is-medium" href="compare_w&c.html">Compare Weather & Climate</a>
-                <a class = "navbar-item is-white is-medium" href= "add_new_entry.html">Add New Entry</a>
-                <a class = "navbar-item is-white is-medium" href="about_us.html">About Us</a>
-            </div>   
-        </header>
-    </div>
-
-    <!-- form -->
-    <h3>Compare up to three locations</h3>
-    <form id="Submission" class= "form" method ="POST" style="margin-left: 35%;"> 
-        <div class="field is-horizontal">
-        <div class="field-label is-normal">
-          <label class="label">Location 1</label>
+    <header>
+        <h1>Weather Vane</h1>
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a class="active" href="compare_w&c.html">Compare Climate & Location</a>
+            <a href="add_new_entry.html">Add New Entry</a>
+            <a href="about_us.html">About Us</a>
         </div>
         <div class="field-body">
           <div class="field">
@@ -73,66 +60,53 @@
 ]                </div>
             </div> -->
         
-        </div>
-      </div>
-    </form>
-    
+    </header>
+    <div class="form">
+        <form id="Compare">
+            <label for="Location1"> Location 1 </label><br>
+            <input class="location_1_box" type="text" id="Location1" name = "Location1" style="width: 800px;"><br>
 
-      <input type="submit" value="Compare" class="button is-white is-focused">
-
-
-    <!-- form location 1
-    <div class="is-active is-centered">
-        <form id="Submission" class= "form is-centered" method ="POST"> 
-        <div class="feild is-centered">
-        <div class = "field  is-horizontal">
-            <div class = "field-label">
-                <label class = "label"> Location 1 </label>
-            </div>
-                <div class = "field-body">
-                    <div class = "field">
-                        <div class = "control">
-                            <input class="input is-rounded" type="text" placeholder = "Location 1" style="width: 400px;">
-                        </div>
-                    </div>
-                </div> 
-
-
-    <!-- form location 2 -->
-        <!-- <div class = "field  is-horizontal">
-            <div class = "field-label is-normal">
-                <label class = "label"> Location 2 </label>
-            </div>
-                <div class = "field-body">
-                    <div class = "field">
-                        <div class = "control">
-                            <input class="input is-rounded" type="text" placeholder = "Location 1">
-                        </div>
-                    </div>
-                </div>
-            </form> 
-
-                <input type="submit" value="Compare" class="button">
-            </form>
-        </div>
-    </div>  -->
-    <!-- form location 2
-    <div class = "field  is-horizontal">
-        <div class = "field-label is-normal">
-            <label class = "label"> Location 2 </label>
-        </div>
-            <div class = "field-body">
-                <div class = "field">
-                    <div class = "control">
-                        <input class="input is-rounded" type="text" placeholder = "Location 3" >
-                    </div>
-                </div>
-            </div>
-        </form> 
+            <label class="location2_label" for="Location2"> Location 2 </label><br>
+            <input class="location_2_box" type="text" id="Location2" name = "Location2" style="width: 800px;"><br>
 
             <input type="submit" value="Compare" class="button">
         </form>
     </div>
-</div>
+
+    <table id="myTable" class="table is-bordered">
+        <thead>
+          <tr>
+              <th id="title1" colspan="7" style="text-align: center;"></th>
+          </tr>  
+          <tr>
+            <th>Temperature</th>   
+            <th>Humidity</th>
+            <th>Date</th>
+            <th>Precipitation</th>
+            <th>Moon Type</th>
+            <th>Full Tide</th>
+          </tr>
+        </thead>
+        <tbody id="loc1"></tbody>
+      </table>
+
+      <table id="myTable2" class="table is-bordered">
+        <thead>
+            <tr>
+                <th id="title2" colspan="7" style="text-align: center;"></th>
+            </tr> 
+            <tr>
+              <th>Temperature</th>   
+              <th>Humidity</th>
+              <th>Date</th>
+              <th>Precipitation</th>
+              <th>Moon Type</th>
+              <th>Full Tide</th>
+            </tr>
+          </thead>
+          <tbody id="loc2"></tbody>
+        </table>
+
+    <script src="compare_w&c.js"></script>
 </body>
 </html> -->
