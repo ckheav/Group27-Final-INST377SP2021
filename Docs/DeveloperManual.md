@@ -50,3 +50,4 @@ The are no prewritten tests in the source repository, but you can use Cypress to
 
 ## Known Bugs and Future Development
 ### Bugs:
+- In Compare Weather and Climate the user must input two desire locations if one is left empty two tables will be shown but one with the incorrect data points other wise the logic will try to follow through, in the future we hope that the tables will be filled with more recent data but currently we only have about 1 years worth.
