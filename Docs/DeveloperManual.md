@@ -1,21 +1,5 @@
-# Weather Vane
-## INST 377 Group 27 Final Project
+# Developer Manual For Weather Vane
 
-## Project Description
-Weather is an ever changing aspect of the world and wanting to compare different regions is difficult to do with current websites like weather.com. To address this we developed a weather sites that allows the users to view two regions in detail on things like temperature humidity, wind speeds, pressure, and precipitation. Our website draws data from our MySQL database that was constructed in INST 327 called weather_db, this will also allows users to insert new data points if the region they wanted to see is not currently being displayed.
-
-## Link to the Heroku instance Website for Weather Vane
-- [Heroku](https://polar-anchorage-73490.herokuapp.com/)
-
-## Target browsers
-- Windows PCs (1920X1080)
-- iPhone 6/7/& 8 
-
-## Links
-- [User Manual](https://github.com/ckheav/Group27-Final-INST377SP2021/blob/main/Docs/UserManual.md)
-- [Developer Manual](https://github.com/ckheav/Group27-Final-INST377SP2021/blob/main/Docs/DeveloperManual.md)
-
-# Developer Manual
 ## How to install application and all dependencies
 1. Clone this repository through Github Desktop or through Terminal.
 2. Open repository in VSCode Terminal or Terminal application.
@@ -66,11 +50,3 @@ The are no prewritten tests in the source repository, but you can use Cypress to
 
 ## Known Bugs and Future Development
 ### Bugs:
-
-
-# Team Members
-- [Christian Kheav](https://github.com/ckheav)
-- [Oluwakorede Noren](https://github.com/M-Noren)
-- [Chika Chuku](https://github.com/cheekmsss)
-- [Jared Brock](https://github.com/jb109)
-- [Humdan Ahmed](https://github.com/Humdan1)

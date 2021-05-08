@@ -52,7 +52,7 @@ h1 {
 }
   
   /* Add a color to the active/current link */
-  .topnav a.active {
+  .navbar a.active {
     background-color: #4CAF50;
     color: white;
   }
@@ -94,7 +94,7 @@ h1 {
     font-size: 30px;
     transform: translateX(-50%);
     margin-left: 50%;
-    /* position: relative; */ 
+    position: relative; 
     
   }
 
@@ -145,4 +145,5 @@ h3 {
   text-align: center;
   margin: 2%;
   color: white;
+  font-weight: bolder;
 }

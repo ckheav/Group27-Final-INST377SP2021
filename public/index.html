@@ -12,28 +12,29 @@
     <title>Group 27 Final Group Project</title>
 </head>
 <body >
-    <div class = "box">
-      <h1> Weather Vane </h1>
-    
-      <header class="flex-container">
-          <div class="topnav">
-              <a class="active button is-white is-medium" href="index.html"> Home</a>
-              <a class = "button is-white is-medium" href="compare_w&c.html">Compare Weather & Climate</a>
-              <a class = "button is-white is-medium" href= "add_new_entry.html">Add New Entry</a>
-              <a class = "button is-white is-medium" href="about_us.html">About Us</a>
-          </div>   
-      </header>
+      <!-- Quick little nav bar and header -->
+      <div class = "box">
+        <h1> Weather Vane </h1>
+      
+        <header class="flex-container">
+            <nav class= "navbar" role = "navigation">
+            <div class = "navbar-brand">
+                <a class = "active navbar-item is-white is-medium" href="index.html"> Home </a>
+                <a class = "navbar-item is-white is-medium" href="compare_w&c.html">Compare Weather & Climate</a>
+                <a class = "navbar-item is-white is-medium" href= "add_new_entry.html">Add New Entry</a>
+                <a class = "navbar-item is-white is-medium" href="about_us.html">About Us</a>
+            </div>   
+        </header>
     </div>
     <div class = block style = "background-image: url('clouds.jpg');">
         <h3> Welcome to Weather Vane! </h3>
    
-        <h4> Choose two locations to compare their weather 
-        and climate</h4>
+        <h4> Compare up to three desired locations or add a new location to the site</h4>
     
    
-        <div class = "buttons is-centered is-right is-down" style="margin-top: 800;" > 
-            <a class="button is-link is-large  is-light"> Compare Locations</a>
-            <a class="button is-info is-large is-light"> Add New Location </a>
+        <div class = "homebutton" style="margin-top: 800;" > 
+            <a class="button is-link is-large  is-light" href = "compare_w&c.html"> Compare Locations</a>
+            <a class="button is-info is-large is-light" href = "add_new_entry.html"> Add New Location </a>
         </div>
     </div>
     <!-- <img src = tundrabiome.jpg style="width: 50%">
