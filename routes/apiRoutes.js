@@ -291,6 +291,7 @@ router.get('/regions/:region_id', async (req, res) => {
 });
 
 router.post('/regions', async (req, res) => {
+  const regions = await db.regions.findAll();
   const currentID = (await regions.length) + 1;
   try {
     const newEvent = await db.regions.create({

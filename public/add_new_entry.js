@@ -17,8 +17,6 @@ async function windowActions() {
   form.addEventListener('submit', async(event) => {
     event.preventDefault();
     console.info('submitted form', event.target);
-    console.info('submitted form', event.target);
-
     const post = await fetch('/api/regions', {
       method: 'POST',
       headers: {
