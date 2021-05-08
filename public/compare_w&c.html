@@ -27,7 +27,7 @@
     </div>
     <!-- form -->
     <h3>Compare up to three locations</h3>
-    <form id="Submission" class= "form" method ="POST" style="margin-left: 35%;"> 
+    <form id="Compare" class="form" style="margin-left: 35%;"> 
         <div class="field is-horizontal">
         <div class="field-label is-normal">
           <label class="label">Location 1</label>
@@ -35,98 +35,65 @@
         <div class="field-body">
           <div class="field">
             <p class="control">
-                <input class="input is-rounded is-medium" type="text" placeholder="City, State, or Zip Code" style="width: 300px;">            
+                <input id="Location1" class="input is-rounded is-medium" type="text" placeholder="City, State, or Zip Code" style="width: 300px;">            
             </p>
           </div>
         </div>
       </div>
+      
       <div class="field is-horizontal">
-        <div class="field-label is-normal">
-          <label class="label">Location 2</label>
-        </div>
-        <div class="field-body">
-          <div class="field">
-            <div class="control">
-              <input class="input is-rounded is-medium" type="text" placeholder="City, State, or Zip Code" style="width: 300px;">
+            <div class="field-label is-normal">
+                <label class="label">Location 2</label>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="field is-horizontal">
-        <div class="field-label is-normal">
-          <label class="label">Location 3</label>
-        </div>
-        <div class="field-body">
-          <div class="field">
-            <div class="control">
-                <input class="input is-rounded is-medium" type="text" placeholder="City, State, or Zip Code" style="width: 300px;">
-            </div>
-            </div>
-            <!-- <div class = "field" >
-                <div class = "field is-horizontal" style = "margin-top: -25%;"> 
-                    <div class="field-label is-normal">
-                    <label class="label">Date</label>
+            <div class="field-body">
+                <div class="field">
+                    <div class="control">
+                        <input id="Location2" class="input is-rounded is-medium" type="text" placeholder="City, State, or Zip Code" style="width: 300px;">
                     </div>
-                    
-                    <input type="date" class = "dropdown-item"  >
                 </div>
-            </div> -->
-        
+            </div>
         </div>
       </div>
+      <input type="submit" value="Compare" class="button is-info is-light" style="margin-left: 350px; margin-bottom: 50px;">
     </form>
-    
-    <input type="submit" value="Compare" class="button is-info is-light">
 
-    <!-- form location 1
-    <div class="is-active is-centered">
-        <form id="Submission" class= "form is-centered" method ="POST"> 
-        <div class="feild is-centered">
-        <div class = "field  is-horizontal">
-            <div class = "field-label">
-                <label class = "label"> Location 1 </label>
-            </div>
-                <div class = "field-body">
-                    <div class = "field">
-                        <div class = "control">
-                            <input class="input is-rounded" type="text" placeholder = "Location 1" style="width: 400px;">
-                        </div>
-                    </div>
-                </div> 
+    <div class="columns" style="margin-left: auto; margin-left: 500px;display: flex; margin-bottom: 500px;">
+        <table id="myTable" class="table is-bordered">
+            <thead>
+            <tr>
+                <th id="title1" colspan="7" style="text-align: center;"></th>
+            </tr>  
+            <tr>
+                <th>Temperature</th>   
+                <th>Humidity</th>
+                <th>Date</th>
+                <th>Precipitation</th>
+                <th>Moon Type</th>
+                <th>Full Tide</th>
+            </tr>
+            </thead>
+            <tbody id="loc1"></tbody>
+        </table>
 
-    <!-- form location 2 -->
-        <!-- <div class = "field  is-horizontal">
-            <div class = "field-label is-normal">
-                <label class = "label"> Location 2 </label>
-            </div>
-                <div class = "field-body">
-                    <div class = "field">
-                        <div class = "control">
-                            <input class="input is-rounded" type="text" placeholder = "Location 1">
-                        </div>
-                    </div>
-                </div>
-            </form> 
-                <input type="submit" value="Compare" class="button">
-            </form>
-        </div>
-    </div>  -->
-    <!-- form location 2
-    <div class = "field  is-horizontal">
-        <div class = "field-label is-normal">
-            <label class = "label"> Location 2 </label>
-        </div>
-            <div class = "field-body">
-                <div class = "field">
-                    <div class = "control">
-                        <input class="input is-rounded" type="text" placeholder = "Location 3" >
-                    </div>
-                </div>
-            </div>
-        </form> 
-            <input type="submit" value="Compare" class="button">
-        </form>
+        <table id="myTable2" class="table is-bordered">
+            <thead>
+                <tr>
+                    <th id="title2" colspan="7" style="text-align: center;"></th>
+                </tr> 
+                <tr>
+                <th>Temperature</th>   
+                <th>Humidity</th>
+                <th>Date</th>
+                <th>Precipitation</th>
+                <th>Moon Type</th>
+                <th>Full Tide</th>
+                </tr>
+            </thead>
+            <tbody id="loc2"></tbody>
+        </table>
+
+
     </div>
-</div>
+    <script src="compare_w&c.js"></script>
 </body>
-</html> -->
+</html>
