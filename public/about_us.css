@@ -178,7 +178,7 @@ body {
 p{
   margin-top: 15%;
   position: relative;
-  font-size: 25px;
+  font-size: 10px;
 }
 
 .about_us_paragraph{
@@ -239,5 +239,9 @@ li{
 .zero_paragraph{
   margin-top: 10%;
   position: relative;
+}
+
+style{
+  size: 100%;
 }
 
