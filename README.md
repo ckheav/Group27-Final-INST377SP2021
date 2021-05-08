@@ -10,6 +10,7 @@ Weather is an ever changing aspect of the world and wanting to compare different
 ## Target browsers
 - Windows PCs (1920X1080)
 - iPhone 6/7/& 8 
+- Macbook 15 (2017)
 
 ## Links
 - [User Manual](https://github.com/ckheav/Group27-Final-INST377SP2021/blob/main/Docs/UserManual.md)
@@ -65,7 +66,10 @@ The are no prewritten tests in the source repository, but you can use Cypress to
 * PUT - returns response 'Got a PUT request at /api'.
 
 ## Known Bugs and Future Development
-### Bugs:
+### Bugs: 
+- - In Compare Weather and Climate the user must input two desire locations if one is left empty two tables will be shown but one with the incorrect data points other wise the logic will try to follow through, in the future we hope that the tables will be filled with more recent data but currently we only have about 1 years worth.
+- Currently the city location tag, future development enabling state to be searched as well 
+- Another small bug is with the layout of the tables and compare button and how it is only centered when the browers is full screen 
 
 
 # Team Members
