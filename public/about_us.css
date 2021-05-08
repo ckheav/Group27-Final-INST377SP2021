@@ -134,9 +134,9 @@ body {
   }
   
   /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #1e6892;
-    color: white;
+  .navbar a.active {
+    /* background-color: #1e6892; */
+    color:  #4CAF50;
   }
 
   /* Add a black background color to the top navigation */
@@ -164,10 +164,10 @@ body {
   }
   
   /* Add a color to the active/current link */
-  .topnav a.active {
+  /* .topnav a.active {
     background-color: #4CAF50;
     color: white;
-  }
+  } */
 
   .topnav {
     -ms-flex-align: center;

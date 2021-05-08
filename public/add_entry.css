@@ -52,7 +52,7 @@ h1 {
 }
   
   /* Add a color to the active/current link */
-  .topnav a.active {
+  .navbar a.active {
     background-color: #4CAF50;
     color: white;
   }
@@ -145,4 +145,5 @@ h3 {
   text-align: center;
   margin: 2%;
   color: white;
+  font-weight: bolder;
 }
