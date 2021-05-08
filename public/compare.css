@@ -1,6 +1,5 @@
 html {
-    background-color:linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
-    
+    /* background; */
     box-sizing: border-box;
 }
 
@@ -100,6 +99,7 @@ h1 {
   .button{
     margin-top: 2%;
     font-size: 30px;
+    margin-left: 55%;
   }
 
   .location_1_box{
